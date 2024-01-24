@@ -478,7 +478,7 @@ cartHTML.forEach((cart) => {
 //             newPage.classList.add('cart-product-main-container');
 //             // newPage.dataset.id = page.product_id;
 //             newPage.innerHTML= `
-//             <img src="/image/screen27.webp" alt="">
+//             <img src="image/screen27.webp" alt="">
 //             <div class="detail-product">
 //                 <a href="">PC MSI Thin GF63 12VE-023FR OPP</a>
                 
