@@ -146,7 +146,7 @@ const indexToProduct = () => {
             localStorage.setItem("productPrice", productPrice);
             localStorage.setItem("imagePath", imagePath);
             localStorage.setItem("getDataID",getDataID);
-            window.location.href = "/product.html";
+            window.location.href = "product.html";
         });
     });
 }
@@ -353,7 +353,7 @@ const addCartToHTML = () => {
 //     linkProduct.forEach(function(link){
 //         link.addEventListener("click",function(event) {
 //             event.preventDefault(); 
-//             window.location.href = "/product.html";
+//             window.location.href = "product.html";
 //         })
 //     })
     
@@ -467,7 +467,7 @@ cartHTML.forEach((cart) => {
         // localStorage.setItem("productPrice", productPrice);
         localStorage.setItem("imagePath", imagePath);
         localStorage.setItem("getDataID",getDataID);
-        // window.location.href = "/cart.html";
+        window.location.href = "cart.html";
     })
 })
 // cartToPage = () => {
