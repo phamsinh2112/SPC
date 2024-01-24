@@ -1,0 +1,40 @@
+[
+    {
+        "id": 1,
+        "name": "PC Cheetoh GEFORCE RTX 4070 E-sport Pack",
+        "price": 1517,
+        "image": "/image/PC Cheetoh RTX 4070.png"
+    },
+    {
+        "id": 2,
+        "name": "PC Savannah by MSI RTX® 4060 Ti",
+        "price": 2540,
+        "image": "/image/pc7.webp"
+    },
+    {
+        "id": 3,
+        "name": "PC KRAKEN GEFORCE RTX® 4090",
+        "price": 3854,
+        "image": "/image/pc8.png"
+    },
+    {
+        "id": 4,
+        "name": "PC SIBERIA RTX 4070 Ti WHITE",
+        "price": 2154,
+        "image": "/image/pc1.webp"
+    },
+    {
+        "id": 5,
+        "name": "PC BlackHawk AMD RX 7900 XT",
+        "price": 2301,
+        "image": "/image/pc3.webp"
+    },
+    {
+        "id": 6,
+        "name": "PC Savannah by MSI RTX® 4060 Ti",
+        "price": 5410,
+        "image": "/image/pc7.webp"
+    }
+    
+    
+]

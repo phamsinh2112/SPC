@@ -1,0 +1,373 @@
+.breadcrumbs {
+    border-radius: 10px;
+    display: flex;
+    width: 460px;
+    height: 45px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-left: 20px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+    a {
+        text-decoration: none;
+        color: $white-color;
+        font-size: 1.2rem;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    i {
+        font-size: 0.6rem;
+        margin-right: 18px;
+    }
+    p {
+        font-size: 1.2rem;
+    }
+    
+}
+
+.product{
+    display: flex;
+    padding: 30px 30px;
+}
+
+.product-image{
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 20px;
+    height: 520px;
+    &:hover .next {  
+        display: block;
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.product-image-main{
+    width: 410px;
+    height: 500px;
+    background-color: $grey-color;
+    border-radius: 20px;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px;
+    cursor: pointer;
+    
+}
+
+.next {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    display: none;
+}
+
+.next-icon, .pre-icon {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: $main-color;
+    margin-right: 290px;
+    cursor: pointer;
+    &:hover {
+        opacity: 0.5;
+    }
+
+}
+
+.product-image-extra{
+    width: 60px;
+    height: 6%; 
+    margin-right: 10px;
+    img {
+        height: 50px;
+    }
+}
+
+.product-image-extra-small{
+    background-color: $grey-color;
+    border-radius: 10px; 
+    margin-bottom: 10px;
+    cursor: pointer;
+    img {
+        width: 60px;
+    }
+    &:hover {
+        opacity: 0.5;
+    }
+    
+}
+
+.product-detail{
+    padding: 0 10px;
+    width: 515px;
+}
+
+.product-detail-title{
+    font-size: 3rem;
+    line-height: 3rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.product-detail-more{
+    color: #cccc;
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+}
+
+.product-detail-advance{
+    display: flex;
+
+}
+
+.product-detail-advance-detail{
+    display: flex;
+    align-items: center;
+    width: 220px;
+    height: 50px;
+    margin-right: 30px;
+    
+}
+
+.product-detail-advance-text {
+    display: block;
+    width: 300px;
+}
+
+.product-detail-advance-icon{
+    margin-right: 20px;
+    i {
+        margin-left: 0;
+    }
+}
+
+.product-detail-deliver{
+    display: flex;
+    border: 1px solid;
+    justify-content: space-around;
+    border-radius: 20px;
+    align-items: center;
+    height: 70px;
+    margin-top: 30px;
+}
+
+.product-detail-deliver-detail{
+    display: flex;
+    align-items: center;
+    width: 150px;
+    line-height: 1rem;
+    i {
+        margin-left: 0;
+        font-size: 1.5rem;
+        margin-right: 10px;
+    }
+    p{
+        font-size: 0.8rem;
+    }
+}
+
+.product-detail-cart{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    align-items: center;
+}
+
+.product-detail-cart-money{
+    font-size: 2rem;
+    color: $main-color;
+    font-weight: 600;
+    
+}
+
+.product-detail-cart-btn{
+    width: 150px;
+    height: 50px;
+    font-weight: 600;
+    
+    i {
+        margin-right: 10px;
+        font-size: 1rem;
+        margin-left: -5px;
+    }
+    p {
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+    &:hover {
+        opacity: 0.5;
+    }
+}
+
+.product-detail-like{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    i {
+        margin-right: 10px;
+        margin-left: 0;
+    }
+    &:hover {
+        color: $main-color;
+        cursor: pointer;
+        
+    }
+}
+
+.product-detail-compare{
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    i {
+        margin-left: 0;
+        margin-right: 10px;
+    }
+    &:hover {
+        color: $main-color;
+        cursor: pointer;
+    }
+}
+
+.product-detail-condition{
+    margin-top: 60px;
+    p {
+        font-size: 1.3rem;
+        color: $main-color;
+        font-weight: 600;
+    }
+    h4 {
+        margin-top: 20px;
+        color: #ccc;
+    }
+}
+
+.text-side{
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 30px;
+}
+.image-game {
+    text-align: center;
+}
+
+.screen {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.screen-item {
+    width: 350px;
+    img {
+        width: 350px;
+        height: 350px;
+    }
+    h3 {
+        color: $main-color;
+        text-align: center;
+        font-size: 1.9rem;
+        line-height: 2.2rem;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    button {
+        border: none;
+        text-align: center;
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+    
+}
+
+.specifications {
+    padding: 20px 20px;
+    margin-top: 80px;
+    h2 {
+        color: $main-color;
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+    table {
+        width: 100%;
+        
+    }
+    td {
+        padding: 10px 10px;
+        font-size: 1.2rem;
+        border-bottom: 1px solid $main-color;
+    }
+}
+
+.top {
+    border-top: 1px solid $main-color;
+}
+
+.w25{
+    width: 25%;
+}
+
+.w75{
+    width: 75%;
+}
+
+.whatfor {
+    margin-top: 50px;
+}
+
+.whatfor-content {
+    display: flex;
+    padding: 20px 20px;
+}
+
+.whatfor-body {
+    display: flex;
+}
+.whatfor-content-img {
+    text-align: center;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    i{
+        font-size: 2rem;
+    }
+}
+
+.whatfor-content-text {
+    padding: 20px 20px;
+    width: 450px;
+    p{
+        font-size: 1rem;
+    }
+}
+
+.text-for {
+    margin-bottom: 15px;
+    font{
+        font-size: 1.5rem;
+        margin-left: 0;
+        
+    }
+}
+
+.addCart {
+    border: none;
+    color: $white-color;
+}

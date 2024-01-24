@@ -1,0 +1,45 @@
+$main-color: #ffee00;
+$white-color:rgb(255, 255, 255);
+$grey-color : #3b3f42;
+
+.button-learn-more {
+    width: 108px;
+    height: 36.5px;
+    background-color: $main-color;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.large-text {
+    font-size: 3.5rem;
+}
+
+.small-text {
+    font-size: 1.5rem;
+}
+
+.average-text {
+    font-size: 2.8rem;
+}
+
+.fix-height {
+    height: 200px;
+}
+
+.text-center {
+    text-align: center;
+    width: 700px;
+    margin-left: 200px;
+}
+
+.none {
+    display: none;
+}
+
+.shape {
+    background-image: url(/web_editor/web_editor_Floats_10.svg)
+}

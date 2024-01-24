@@ -1,0 +1,51 @@
+.form-login {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding-top: 100px;
+}
+
+.login-contain-text {
+    .form-input {
+        margin-top: 10px;
+    }
+}
+
+.button-loggin {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.btn-loggin {
+    width: 330px;
+    height: 60px;
+    border-radius: 20px;
+    background-color: $main-color;
+    border: none;
+    font-size: 1rem;
+    color: $white-color;
+    text-align: center;   
+    cursor: pointer;
+    &:hover {
+        opacity: 0.9;
+    } 
+}
+
+.CreateAccount {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.CreateAccount-link {
+    margin-right: 20px;
+    text-decoration: none;
+    color: $main-color;
+    font-size: 1rem;
+    &:hover {
+        text-decoration: underline;
+        opacity: 0.5;
+    }
+    margin-bottom: 280px;
+}

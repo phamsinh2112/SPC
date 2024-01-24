@@ -1,0 +1,53 @@
+.footer{
+    background-color: rgb(0, 0, 0);
+    padding: 30px 0;
+}
+
+.footer-container {
+    width: 100̀;
+    display: flex;
+    justify-content: center;  
+    align-items: center;    
+}
+.pivacy {
+    text-align: center;
+}
+.contact{
+    display: flex;
+    font-size: 0.9rem;
+    h3 {
+        margin-right: 20px;
+    }
+}
+
+.legal {
+    display: flex;
+    font-size: 0.8rem;
+    opacity: 0.8;
+    h4 {
+        margin-right: 20px;
+    }
+}
+
+.contact-link{
+    text-decoration: none;
+    color: $white-color;
+    &:hover {
+        opacity: 0.5;
+    }
+}
+
+.social{
+    display: flex;
+    align-items: center;
+}
+
+.social-link{
+    text-decoration: none;
+    color: $main-color;
+    margin-left: 30px;
+    font-size: 2rem;
+    &:hover {
+        opacity: 0.5;
+    }
+}

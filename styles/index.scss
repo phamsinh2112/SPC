@@ -1,0 +1,39 @@
+@import 'header';
+@import 'footer';
+@import 'wrap';
+@import 'container';
+@import 'main';
+@import 'grid';
+@import 'responsive';
+@import 'variables';
+@import 'product';
+@import 'collaboration';
+@import 'login';
+@import 'cart';
+@import 'address';
+body {
+    background-color: rgb(33, 37, 41);
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    margin: 0;
+    padding: 0;
+    &::-webkit-scrollbar{
+        width: 5px;  
+    }
+    &::-webkit-scrollbar-track {      
+        border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: $main-color; 
+        border-radius: 10px;
+    }
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+

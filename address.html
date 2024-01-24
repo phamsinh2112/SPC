@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming PC</title>
+    <script src="https://kit.fontawesome.com/da53e9a5ff.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles/index.css"> 
+</head>
+<body>
+    <div class="wrapwrap">      
+        <div class="container">
+            <header class="header">
+                <nav class="Navbar">
+                    <div class="top_menu_container">
+                        <a href="/" class="logo">
+                            <span role="img" title="Playstation_Gaming">
+                                <img src="image/cyber.png" alt="Playstation_Gaming" loading="lazy" class="img-logo">
+                            </span>
+                        </a>
+                        <input type="checkbox" id="check">
+                        <label class="top_menu_collapse" for="check">
+                            <ul class="top_menu">
+                                <li role="presentation" class="nav-item">
+                                    <a href="/pc.html" class="nav-link" style="--i:0;">
+                                        <span>Our Gaming PCs</span>
+                                    </a>
+                                </li>
+                                <li role="presentation" class="nav-item">
+                                    <a href="/laptop.html" class="nav-link" style="--i:1;">
+                                        <span>Laptop</span>
+                                    </a>
+                                </li>
+                                <li role="presentation" class="nav-item">
+                                    <a href="/tailor.html" class="nav-link" style="--i:2;">
+                                        <span>Tailor-made</span>
+                                    </a>
+                                </li>
+                                <li role="presentation" class="nav-item">
+                                    <a href="/ourscreen.html" class="nav-link" style="--i:3;">
+                                        <span>Our screens</span>
+                                    </a>
+                                </li>
+                                <li role="presentation" class="nav-item">
+                                    <a href="/collaboration.html" class="nav-link" style="--i:4;">
+                                        <span>PC Collaboration</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </label>
+                        <div class="header_right">
+                            <ul class="navbar_expand">
+                                <li class="cart">
+                                    <a href="/cart.html" class="cart-link">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                        <div class="my-cart-quantity"></div>                                      
+                                    </a>
+                                    <div class="cart-container">
+                                        <h3>My Cart</h3>
+                                        <div class="cart-container-product">
+                                                                               
+                                        </div>
+                                        <div class="cart-container-sub">
+                                            <div class="cart-container-subtotal">
+                                                <h4>Subtotal :</h4>
+                                                <p>0</p>
+                                            </div>
+                                            <div class="cart-container-tax">
+                                                <h4>Taxes :</h4>
+                                                <p>0</p>
+                                            </div>
+                                        </div>
+                                        <div class="cart-container-total">
+                                            <div class="cart-container-totalmoney">
+                                                <h4>Total :</h4>
+                                                <p>0</p>
+                                            </div>
+                                            <a href="/cart.html">
+                                                <div class="cart-container-btn">
+                                                    View cart 
+                                                </div>
+                                            </a>                                          
+                                        </div>
+                                    </div>                                 
+                                </li>
+                                
+                                <li class="login">
+                                    <a href="" class="cart-link">
+                                        Sign in
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <label class="sidebar" for="check">
+                            <i class="fa-solid fa-bars"  id="menu-icon"></i>
+                            <i class="fa-solid fa-x" id="close-icon"></i>
+                        </label>
+                        
+                    </div>
+                </nav>
+            </header>
+            <main>
+                <div class="wrap" >
+                    <div class="breadcrumbs">
+                        <a href="/cart.html">Your Cart</a>
+                        <i class="fa-solid fa-chevron-right"></i>
+                        <p>Your Adress</p>
+                    </div>
+                    <div class="address">
+                        <div class="address-left">
+
+                            <div class="attention">
+                                <p>Attention!</p>
+                            </div>
+                            <h1>Some required fields are empty</h1>
+                            <form class="form-address">
+                                <div class="address-contain">
+                                    <div class="address-contain-text">
+                                        <label for="name" class="address-label">Full Name</label><br>
+                                        <input type="text" id="name" name="name" class="address-input large"><br>
+                                    </div>
+                                                              
+                                </div>
+                                <div class="address-contain">
+                                    <div class="address-contain-text">
+                                        <label for="email" class="address-label">Email*</label><br>
+                                        <input type="email" id="email" name="email" class="address-input"><br>
+                                        
+                                    </div>
+                                    <div class="address-contain-text">
+                                        <label for="telephone" class="address-label">Telephone number*</label><br>
+                                        <input  type="number" id="number" name="number" class="address-input"><br>
+                                    </div> 
+                                    
+                                </div>
+                                <div class="address-contain">
+                                    <div class="address-contain-text">
+                                        <label for="company" class="address-label">Company Name</label><br>
+                                        <input type="text" id="company" name="company" class="address-input"><br>
+                                    </div>
+                                    <div class="address-contain-text">
+                                        <label for="VAT" class="address-label">VAT</label><br>
+                                        <input type="text" id="VAT" name="VAT" class="address-input"><br>
+                                    </div>
+                                </div>
+                                <div class="address-contain">
+                                    <div class="address-contain-text">
+                                        <label for="Street" class="address-label">Street and number</label><br>
+                                        <input type="text" id="Street" name="Street" class="address-input large"><br>
+                                    </div>
+                                </div>
+                                <div class="address-contain">
+                                    <div class="address-contain-text">
+                                        <label for="Street" class="address-label">Street 2</label><br>
+                                        <input type="text" id="Street" name="Street" class="address-input large"><br>
+                                    </div>
+                                </div>
+                                <div class="address-contain">
+                                    <div class="address-contain-text">
+                                        <label for="City" class="address-label">City</label><br>
+                                        <input type="text" id="City" name="City" class="address-input"><br>
+                                    </div>
+                                    <div class="address-contain-text">
+                                        <label for="code" class="address-label">Postal code</label><br>
+                                        <input type="text" id="code" name="code" class="address-input"><br>
+                                    </div>
+                                </div>
+                                <div class="address-contain">
+                                    <div class="address-contain-text">
+                                        <label for="Country" class="address-label">Country</label><br>
+                                        <input type="text" id="Country" name="Country" class="address-input"><br>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="cart-product-footer">
+                                <a href="/cart.html">
+                                    <button class="btn-return">Back</button>
+                                </a>
+                                <a href="">
+                                    <button class="btn-next">Following</button>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="adress-total">
+                            <div class="address-total-main">
+                                <div class="cart-total-header">
+                                    <div class="cart-total-header-product">
+                                        <p>Product</p>
+                                    </div>
+                                    <div class="cart-total-header-quanlity">
+                                        <p>Ql</p>
+                                    </div>
+                                    <div class="cart-total-header-price">
+                                        <p>Price</p>
+                                    </div>                             
+                                </div>
+                                <div class="cart-total-product">
+                                    <img src="/image/screen27.webp" alt="">
+                                    <p>PC MSI Thin GF63 12VE-023FR OPP</p>
+                                    <p>1</p>
+                                    <p>€ 1,108.15</p>
+                                </div>
+                                <div class="cart-total-product">
+                                    <img src="/image/screen27.webp" alt="">
+                                    <p>PC MSI Thin GF63 12VE-023FR OPP</p>
+                                    <p>1</p>
+                                    <p>€ 1,108.15</p>
+                                </div>
+                                <div class="cart-total-product">
+                                    <img src="/image/screen27.webp" alt="">
+                                    <p>PC MSI Thin GF63 12VE-023FR OPP</p>
+                                    <p>1</p>
+                                    <p>€ 1,108.15</p>
+                                </div>
+                                <div class="cart-total-product">
+                                    <img src="/image/screen27.webp" alt="">
+                                    <p>PC MSI Thin GF63 12VE-023FR OPP</p>
+                                    <p>1</p>
+                                    <p>€ 1,108.15</p>
+                                </div>
+                                <div class="cart-total-product">
+                                    <img src="/image/screen27.webp" alt="">
+                                    <p>PC MSI Thin GF63 12VE-023FR OPP</p>
+                                    <p>1</p>
+                                    <p>€ 1,108.15</p>
+                                </div>
+                                <div class="cart-container-sub">
+                                    <div class="cart-container-subtotal">
+                                        <h4>Subtotal :</h4>
+                                        <p>0</p>
+                                    </div>
+                                    <div class="cart-container-tax">
+                                        <h4>Taxes :</h4>
+                                        <p>0</p>
+                                    </div>
+                                </div>
+                                <div class="cart-container-total">
+                                    <div class="cart-container-totalmoney">
+                                        <h4>Total :</h4>
+                                        <p>0</p>
+                                    </div>
+                                                                                                      
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>        
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="pivacy">
+                <div class="contact">
+                    <a href="" class="contact-link">
+                        <h3>By the way</h3>
+                    </a>
+                    <a href="" class="contact-link">
+                        <h3>Our Blog</h3>
+                    </a>
+                    <a href="" class="contact-link">
+                        <h3>Contact</h3>
+                    </a>
+                    <a href="" class="contact-link">
+                        <h3>After-Sales Service </h3>
+                    </a>
+                </div>
+                <div class="legal">
+                    <a href="" class="contact-link">
+                        <h4>Legal</h4>
+                    </a>
+                    <a href="" class="contact-link">
+                        <h4>Term of Sale</h4>
+                    </a>
+                    <a href="" class="contact-link">
+                        <h4>Privacy Policy</h4>
+                    </a>
+                    <a href="" class="contact-link">
+                        <h4>Copyright © Game</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="social">
+                <a href="" class="social-link">
+                    <div class="social-network">
+                        <i class="fa-brands fa-facebook"></i>
+                    </div>
+                </a>
+                <a href="" class="social-link">
+                    <div class="social-network">
+                        <i class="fa-brands fa-telegram"></i>
+                    </div>
+                </a>
+                <a href="" class="social-link">
+                    <div class="social-network">
+                        <i class="fa-brands fa-twitter"></i>
+                    </div>
+                </a>
+                <a href="" class="social-link">
+                    <div class="social-network">
+                        <i class="fa-brands fa-youtube"></i>
+                    </div>
+                </a>
+                <a href="" class="social-link">
+                    <div class="social-network">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </a>
+                <a href="" class="social-link">
+                    <div class="social-network">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </div>
+                </a> 
+            </div>
+        </div>
+    </footer>
+    <script src="/index.js"></script>
+</body>
+</html>
