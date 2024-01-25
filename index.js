@@ -250,7 +250,7 @@ const addDataToHTML = () => {
 }
 
 let productHTML = document.querySelectorAll('.product');
-let listCartHTML = document.querySelector('.cart-container-product')
+let listCartHTML = document.querySelector('.cart-container-product');
 let carts = [];
 
 productHTML.forEach((product) => {
@@ -264,9 +264,7 @@ productHTML.forEach((product) => {
         var positionClick = event.target;
         if(positionClick.classList.contains('product-detail-cart-btn')) {
             addToCart(product_id,getProduct_title,product_image_src,product_price);
-            cartToPage();
-        }
-        
+        }    
     })
 })
 
@@ -278,7 +276,6 @@ const addToCart = (product_id, getProduct_title, product_image_src, product_pric
     let product_pricetotal_cart = parseFloat(cart_price_total.textContent);
     let product_pricetax_cart = parseFloat(cart_price_tax.textContent);
     let positionThisProductInCart = carts.findIndex((value) => value.product_id == product_id);
-    console.log(current_cart_price)
     if (carts.length <= 0) {
       carts = [{
         title: getProduct_title,
@@ -308,7 +305,6 @@ const addToCart = (product_id, getProduct_title, product_image_src, product_pric
       carts[positionThisProductInCart].image = product_image_src;
       carts[positionThisProductInCart].title = getProduct_title;
     }
-  
     addCartToHTML();
     let new_cart_price = carts.reduce((total, item) => total + item.total, 0);
     let new_cart_pricetax = carts.reduce((total, item) => total + item.quantity * 5, 0);
@@ -317,7 +313,7 @@ const addToCart = (product_id, getProduct_title, product_image_src, product_pric
     cart_price_tax.textContent = new_cart_pricetax;
     cart_price_total.textContent = new_total_cart_price;
     addCartToMemory(new_total_cart_price, new_cart_pricetax, new_cart_price);
-  }
+}
 
 const addCartToHTML = () => {
     listCartHTML.innerHTML = '';
@@ -448,81 +444,15 @@ window.addEventListener('load', () => {
 const removeCartFromMemory = () => {
     localStorage.removeItem('carts');
 };
+
+
   
-// ------- Xử lý trang giỏ hàng ---------
-let cartHTML = document.querySelectorAll('.cart');
-let pageCart = document.querySelector('.cart-product-main');
-let pages = [];
-
-cartHTML.forEach((cart) => {
-    cart.addEventListener("click",function(event) {
-        event.preventDefault(); 
-        var cartTitle = this.querySelector(".link-to-product h4").textContent;
-        var cartImage = this.querySelector(".image-cart");
-        var cartId = this.querySelector('.cart-container-product-item');
-        var getDataID = cartId.getAttribute('data-id');
-        var imagePath = cartImage.getAttribute("src");
-        // var productPrice = this.querySelector(".carousel-product-body-bot-money span").textContent;
-        localStorage.setItem("cartTitle", cartTitle);
-        // localStorage.setItem("productPrice", productPrice);
-        localStorage.setItem("imagePath", imagePath);
-        localStorage.setItem("getDataID",getDataID);
-        window.location.href = "cart.html";
-    })
-})
-// cartToPage = () => {
-//     pageCart.innerHTML = '';
-//     if(pages.length > 0){
-//         pages.forEach(page => {
-//             let newPage = document.createElement('div');
-//             newPage.classList.add('cart-product-main-container');
-//             // newPage.dataset.id = page.product_id;
-//             newPage.innerHTML= `
-//             <img src="image/screen27.webp" alt="">
-//             <div class="detail-product">
-//                 <a href="">PC MSI Thin GF63 12VE-023FR OPP</a>
-                
-//             </div>
-//             <div class="quality">
-//                 <i class="fa-solid fa-minus"></i>
-//                 <p>1</p>
-//                 <i class="fa-solid fa-plus"></i>
-//             </div>
-//             <div class="price">
-//                 <p>€ 1.374,92</p>
-//             </div>
-//             <div class="total">
-//                 <p>€ 1.374,92</p>
-//             </div>
-//             `;
-//             pageCart.appendChild(newPage);
-//         })
-//     }    
-// }
-// var cartTitle = localStorage.getItem("cartTitle");
-    // var getDataId = localStorage.getItem("getDataID");
-    // // var productPrice = localStorage.getItem("productPrice");
-    // var imagePath = localStorage.getItem("imagePath");  
-    // var getDataIDElement = document.querySelector(".cart-product-main-container");
-    // getDataIDElement.setAttribute('data-id',getDataId);
-    // var productTitleElement = document.querySelector(".detail-product a");
-    // productTitleElement.textContent = cartTitle;
-    // // var productPriceElement = document.querySelector(".product-detail-cart-money");
-    // // productPriceElement.textContent = productPrice;
-    // var imageElement = document.querySelector(".cart-product-main-container img");
-    // imageElement.src = imagePath;
-
-
-
-
-
 const initApp = () => {
     fetch('products.json')
     .then(response => response.json())
     .then(data => {
         listProducts = data;
-        addDataToHTML();
-        
+        addDataToHTML();       
     })
 }
 initApp();

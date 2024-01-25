@@ -2534,6 +2534,11 @@
   justify-content: flex-end;
 }
 
+.cart-container-btn {
+  margin-top: 0;
+  margin-left: 0;
+}
+
 .address {
   padding: 20px 20px;
 }
