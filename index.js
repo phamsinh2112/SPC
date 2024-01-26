@@ -313,10 +313,13 @@ const addToCart = (product_id, getProduct_title, product_image_src, product_pric
     cart_price_tax.textContent = new_cart_pricetax;
     cart_price_total.textContent = new_total_cart_price;
     addCartToMemory(new_total_cart_price, new_cart_pricetax, new_cart_price);
+    showCart();
+    showAddress();
 }
 
 const addCartToHTML = () => {
     listCartHTML.innerHTML = '';
+    console.log(listCartHTML)
     if(carts.length > 0){
         carts.forEach(cart => {
             let newCart = document.createElement('div');
@@ -341,21 +344,154 @@ const addCartToHTML = () => {
     }  
 }
 
-// ------- Xử lý truy cập sản phẩm từ giỏ hàng -----------
+// ------------- SHOW CART ----------------
+const showCart = () => {
+    var productCart = sessionStorage.getItem('cart');
+    var getProductCart = JSON.parse(productCart);
+  
+    var cartContainer = document.getElementById('cart-container');
+    var ul = document.createElement('ul');
 
-// const addCartToProduct = () => {
-//     var linkProduct = document.querySelectorAll('.link-to-product');
-//     console.log(linkProduct)
-//     linkProduct.forEach(function(link){
-//         link.addEventListener("click",function(event) {
-//             event.preventDefault(); 
-//             window.location.href = "product.html";
-//         })
-//     })
+    var totalTax = 0;
+    var total = 0;
+    var totalCart = 0;
+    for (var i = 0; i < getProductCart.length; i++) {
+        var product = getProductCart[i];
     
-// }
+        var li = document.createElement('li');
+    
+        var img = document.createElement('img');
+        img.src = product.image;
+        img.alt = product.name;
+        li.appendChild(img);
+    
+        var nameSpan = document.createElement('span');
+        nameSpan.textContent = product.title;
+        li.appendChild(nameSpan);
+    
+        
+        var quantityContainer = document.createElement('div');
+        quantityContainer.classList.add('quantity-pageCart');
+        var decreaseBtn = document.createElement('button');
+        decreaseBtn.classList.add('minus1');
+        decreaseBtn.textContent = '-';
+        decreaseBtn.addEventListener('click', decreaseQuantity.bind(null, i));
+        quantityContainer.appendChild(decreaseBtn);
+    
+        var quantitySpan = document.createElement('p');
+        quantitySpan.classList.add('qt');
+        quantitySpan.textContent = product.quantity;
+        quantityContainer.appendChild(quantitySpan);
+    
+        var increaseBtn = document.createElement('button');
+        increaseBtn.textContent = '+';
+        increaseBtn.classList.add('plus1');
+        increaseBtn.addEventListener('click', increaseQuantity.bind(null, i));
+        quantityContainer.appendChild(increaseBtn);
+    
+        li.appendChild(quantityContainer);
 
-//  -----------------------------------------------------
+        var priceSpan = document.createElement('p');
+        priceSpan.textContent = product.price + ' $';
+        li.appendChild(priceSpan);
+
+        var totalSpan = document.createElement('h2');
+        var productTotal = product.price * product.quantity;
+        totalSpan.textContent = productTotal + ' $';
+        li.appendChild(totalSpan);
+
+        total += productTotal; 
+        var tax = product.quantity * 5;
+        totalTax += tax;
+        totalCart = total + totalTax;
+        ul.appendChild(li);
+    }
+    
+    cartContainer.innerHTML = '';
+    cartContainer.appendChild(ul);
+    var gettotalSpan = document.querySelector('.cart-container-subtotal1 p');
+    gettotalSpan.textContent = total;
+    var gettaxSpan = document.querySelector('.cart-container-tax1 p');
+    gettaxSpan.textContent = totalTax;
+    var gettotalCartSpan = document.querySelector('.cart-container-totalmoney1 p');
+    gettotalCartSpan.textContent = totalCart;
+    
+}
+const decreaseQuantity = (index) => {
+    var productCart = sessionStorage.getItem('cart');
+    var getProductCart = JSON.parse(productCart);
+  
+    if (getProductCart[index].quantity > 1) {
+      getProductCart[index].quantity--;
+      sessionStorage.setItem('cart', JSON.stringify(getProductCart));
+      showCart();
+    }
+}
+  
+    const increaseQuantity = (index) => {
+        var productCart = sessionStorage.getItem('cart');
+        var getProductCart = JSON.parse(productCart);
+    
+        getProductCart[index].quantity++;
+        sessionStorage.setItem('cart', JSON.stringify(getProductCart));
+        showCart();
+}
+//-------------------------------------------------------
+
+// -------------- SHOW ADDRESS ------------------------
+const showAddress= () => {
+    var productCart = sessionStorage.getItem('cart');
+    var getProductCart = JSON.parse(productCart);
+
+    var addressContainer = document.getElementById('address-container');
+    var ul = document.createElement('ul');
+    var totalTax = 0;
+    var total = 0;
+    var totalCart = 0;
+    for (var i = 0; i < getProductCart.length; i++) {
+        var product = getProductCart[i];
+    
+        var li = document.createElement('li');
+    
+        var img = document.createElement('img');
+        img.src = product.image;
+        img.alt = product.name;
+        li.appendChild(img);
+    
+        var nameSpan = document.createElement('span');
+        nameSpan.textContent = product.title;
+        li.appendChild(nameSpan);
+
+        var quantitySpan = document.createElement('p');
+        quantitySpan.textContent =  product.quantity;
+        li.appendChild(quantitySpan);
+
+        var priceSpan = document.createElement('p');
+        priceSpan.textContent = product.price + ' $';
+        // li.appendChild(priceSpan);
+
+        var totalSpan = document.createElement('h2');
+        var productTotal = product.price * product.quantity;
+        totalSpan.textContent = productTotal + ' $';
+        li.appendChild(totalSpan);
+
+        total += productTotal; 
+        var tax = product.quantity * 5;
+        totalTax += tax;
+        totalCart = total + totalTax;
+        ul.appendChild(li);
+    }
+    
+    addressContainer.innerHTML = '';
+    addressContainer.appendChild(ul);
+    var gettotalSpan = document.querySelector('.cart-container-subtotal2 p');
+    gettotalSpan.textContent = total;
+    var gettaxSpan = document.querySelector('.cart-container-tax2 p');
+    gettaxSpan.textContent = totalTax;
+    var gettotalCartSpan = document.querySelector('.cart-container-totalmoney2 p');
+    gettotalCartSpan.textContent = totalCart;
+}
+// ---------------------------------------------------
 
 listCartHTML.addEventListener('click', (event) => {
     var product_id = event.target.closest('.cart-container-product-item').dataset.id; // Lấy product_id từ dataset.id
@@ -411,6 +547,7 @@ const addCartToMemory = (new_total_cart_price,new_cart_pricetax,new_cart_price) 
     localStorage.setItem('new_total_cart_price', JSON.stringify(new_total_cart_price));
     localStorage.setItem('new_cart_pricetax', JSON.stringify(new_cart_pricetax));
     localStorage.setItem('new_cart_price', JSON.stringify(new_cart_price));
+    sessionStorage.setItem("cart",JSON.stringify(carts));
 }
 
 
@@ -452,7 +589,9 @@ const initApp = () => {
     .then(response => response.json())
     .then(data => {
         listProducts = data;
-        addDataToHTML();       
+        addDataToHTML();  
     })
 }
+
 initApp();
+

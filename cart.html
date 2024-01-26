@@ -114,58 +114,8 @@
                                 <p>Price</p>
                                 <p>Total</p>
                             </div>
-                            <div class="cart-product-main">
-                                <div class="cart-product-main-container">
-                                    <img src="image/pc10.png" alt="">
-                                    <div class="detail-product">
-                                    <a href="">PC SIBERIA RTX 4070 Ti WHITE</a>
-                                    </div>
-                                    <div class="quality">
-                                        <i class="fa-solid fa-minus"></i>
-                                        <p>1</p>
-                                        <i class="fa-solid fa-plus"></i>
-                                    </div>
-                                    <div class="price">
-                                        <p>2154 $</p>
-                                    </div>
-                                    <div class="total">
-                                        <p>2154 $</p>
-                                    </div>                                
-                                </div> 
-                                <div class="cart-product-main-container">
-                                    <img src="image/pc7.webp" alt="">
-                                    <div class="detail-product">
-                                    <a href="">PC Savannah by MSI RTX® 4060 Ti</a>
-                                    </div>
-                                    <div class="quality">
-                                        <i class="fa-solid fa-minus"></i>
-                                        <p>1</p>
-                                        <i class="fa-solid fa-plus"></i>
-                                    </div>
-                                    <div class="price">
-                                        <p>2540 $</p>
-                                    </div>
-                                    <div class="total">
-                                        <p>2540 $</p>
-                                    </div>                                
-                                </div> 
-                                <div class="cart-product-main-container">
-                                    <img src="image/pc8.png" alt="">
-                                    <div class="detail-product">
-                                    <a href="">PC KRAKEN GEFORCE RTX® 4090</a>
-                                    </div>
-                                    <div class="quality">
-                                        <i class="fa-solid fa-minus"></i>
-                                        <p>1</p>
-                                        <i class="fa-solid fa-plus"></i>
-                                    </div>
-                                    <div class="price">
-                                        <p>3854 $</p>
-                                    </div>
-                                    <div class="total">
-                                        <p>3854 $</p>
-                                    </div>                                
-                                </div> 
+                            <div class="cart-product-main" id="cart-container">
+                                
                             </div>
                             
                             <div class="cart-product-footer">
@@ -180,19 +130,19 @@
                         <div class="cart-total">
                             <h1>Total order</h1>
                             <div class="cart-container-sub">
-                                <div class="cart-container-subtotal">
+                                <div class="cart-container-subtotal1">
                                     <h4>Subtotal :</h4>
-                                    <p>0</p>
+                                    <p>0 </p> $
                                 </div>
-                                <div class="cart-container-tax">
+                                <div class="cart-container-tax1">
                                     <h4>Taxes :</h4>
-                                    <p>0</p>
+                                    <p>0 </p> $
                                 </div>
                             </div>
                             <div class="cart-container-total">
-                                <div class="cart-container-totalmoney">
+                                <div class="cart-container-totalmoney1">
                                     <h4>Total :</h4>
-                                    <p>0</p>
+                                    <p>0 </p> $
                                 </div>
                                 <a href="" >
                                     <div class="discount-cart">
@@ -200,7 +150,7 @@
                                     </div> 
                                 </a>
                                 <a href="address.html">
-                                    <div class="cart-container-btn">
+                                    <div class="cart-container-btn cart-button">
                                         Proceed to payment
                                     </div>
                                 </a>                                          
@@ -278,6 +228,9 @@
         </div>
     </footer>
     <script src="index.js"></script>
-    <!-- <script src="cart.js"></script> -->
+    <script>
+        showCart();
+    </script>
+    <script src="cart.js"></script>
 </body>
 </html>
