@@ -1,0 +1,56 @@
+[
+    {
+        "id": 7,
+        "name": "Laptop Cheetoh GEFORCE RTX 4070 E-sport Pack",
+        "price": 1345,
+        "image": "image/laptop3.png"
+    },
+    {
+        "id": 8,
+        "name": "Laptop ASUS TUF Gaming F15 FX506HF HN014W",
+        "price": 2540,
+        "image": "image/laptop1.png"
+    },
+    {
+        "id": 9,
+        "name": "Laptop Lenovo Thinkpad P52 Core i7-8750H",
+        "price": 3854,
+        "image": "image/laptop2.png"
+    },
+    {
+        "id": 10,
+        "name": "MacBook Air 2020 13 Inch Chip M1 8GB | 256GB SSD Chính Hãng",
+        "price": 2154,
+        "image": "image/laptop3.png"
+    },
+    {
+        "id": 11,
+        "name": "MacBook Air 2020 13 Inch Chip M1 8GB | 256GB SSD Chính Hãng",
+        "price": 2301,
+        "image": "image/laptop4.png"
+    },
+    {
+        "id": 12,
+        "name": "Laptop Lenovo Thinkpad P52 Core i7-8750H",
+        "price": 7410,
+        "image": "image/laptop5.png"
+    },
+    {
+        "id": 13,
+        "name": "Laptop Lenovo Thinkpad P52 Core i7-8750H",
+        "price": 5410,
+        "image": "image/laptop6.png"
+    },
+    {
+        "id": 14,
+        "name": "Laptop Lenovo Thinkpad P52 Core i7-8750H",
+        "price": 2410,
+        "image": "image/laptop7.png"
+    },
+    {
+        "id": 15,
+        "name": "Laptop Lenovo Thinkpad P52 Core i7-8750H",
+        "price": 1610,
+        "image": "image/laptop8.png"
+    }
+]

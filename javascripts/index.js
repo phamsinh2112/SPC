@@ -585,7 +585,7 @@ const removeCartFromMemory = () => {
 
   
 const initApp = () => {
-    fetch('products.json')
+    fetch('javascripts/products.json')
     .then(response => response.json())
     .then(data => {
         listProducts = data;
