@@ -319,7 +319,6 @@ const addToCart = (product_id, getProduct_title, product_image_src, product_pric
 
 const addCartToHTML = () => {
     listCartHTML.innerHTML = '';
-    console.log(listCartHTML)
     if(carts.length > 0){
         carts.forEach(cart => {
             let newCart = document.createElement('div');
@@ -581,6 +580,7 @@ window.addEventListener('load', () => {
 const removeCartFromMemory = () => {
     localStorage.removeItem('carts');
 };
+
 
 
   

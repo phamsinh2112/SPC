@@ -103,9 +103,9 @@
             <main>
                 <div class="wrap" >
                     <div class="breadcrumbs">
-                        <a href="cart.html">Your Cart</a>
+                        <a href="cart.html">Your Address</a>
                         <i class="fa-solid fa-chevron-right"></i>
-                        <p>Your Adress</p>
+                        <p>Your Order</p>
                     </div>
                     <div class="address">
                         <div class="address-left">
@@ -113,66 +113,35 @@
                             <div class="attention">
                                 <p>Attention!</p>
                             </div>
-                            <h1>Some required fields are empty</h1>
-                            <form class="form-address">
-                                <div class="address-contain">
-                                    <div class="address-contain-text">
-                                        <label for="name" class="address-label">Full Name</label><br>
-                                        <input type="text" id="name" name="name" class="address-input large"><br>
-                                    </div>
-                                                              
-                                </div>
-                                <div class="address-contain">
-                                    <div class="address-contain-text">
-                                        <label for="email" class="address-label">Email*</label><br>
-                                        <input type="email" id="email" name="email" class="address-input"><br>
-                                        
-                                    </div>
-                                    <div class="address-contain-text">
-                                        <label for="telephone" class="address-label">Telephone number*</label><br>
-                                        <input  type="number" id="number" name="number" class="address-input"><br>
-                                    </div> 
+                            <div class="infor">
+                                <div class="infor-text">
                                     
                                 </div>
-                                <div class="address-contain">
-                                    <div class="address-contain-text">
-                                        <label for="company" class="address-label">Company Name</label><br>
-                                        <input type="text" id="company" name="company" class="address-input"><br>
-                                    </div>
-                                    <div class="address-contain-text">
-                                        <label for="VAT" class="address-label">VAT</label><br>
-                                        <input type="text" id="VAT" name="VAT" class="address-input"><br>
-                                    </div>
+                                <div class="infor-link">
+                                    <a href="address.html">
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                    </a>
                                 </div>
-                                <div class="address-contain">
-                                    <div class="address-contain-text">
-                                        <label for="Street" class="address-label">Street and number</label><br>
-                                        <input type="text" id="Street" name="Street" class="address-input large"><br>
-                                    </div>
-                                </div>
-                                <div class="address-contain">
-                                    <div class="address-contain-text">
-                                        <label for="City" class="address-label">City</label><br>
-                                        <input type="text" id="City" name="City" class="address-input"><br>
-                                    </div>
-                                    <div class="address-contain-text">
-                                        <label for="code" class="address-label">Postal code</label><br>
-                                        <input type="text" id="code" name="code" class="address-input"><br>
-                                    </div>
-                                </div>
-                                <div class="address-contain">
-                                    <div class="address-contain-text">
-                                        <label for="Country" class="address-label">Country</label><br>
-                                        <input type="text" id="Country" name="Country" class="address-input"><br>
-                                    </div>
-                                </div>
+                            </div>
+                            <h1>Which method do you want to order?</h1>
+                            <form class="form-payment">
+                                <label for="selectOption" class="aaaa">Select an option:</label>
+                                <select id="selectOption" name="option">
+                                  <option value="option1" class="option1">Payment in cash</option>
+                                  <option value="option2" class="option2">Payment by banking</option>
+                                </select>
                             </form>
+                            <div class="banking">
+                                <p>PHAM VAN HOAI SINH</p>
+                                <p>1903 7852 2550 15</p>
+                                <img src="image/banking.jpg" alt="">
+                            </div>
                             <div class="cart-product-footer">
-                                <a href="cart.html">
+                                <a href="address.html">
                                     <button class="btn-return">Back</button>
                                 </a>
                                 <a href="">
-                                    <button class="btn-next save-data">Following</button>
+                                    <button class="btn-next">Order</button>
                                 </a>
                             </div>
                         </div>
@@ -190,7 +159,12 @@
                                     </div>                             
                                 </div>
                                 <div id="address-container">
-                                    
+                                    <div class="cart-total-product">
+                                        <img src="image/screen27.webp" alt="">
+                                        <p>PC MSI Thin GF63 12VE-023FR OPP</p>
+                                        <p>1</p>
+                                        <p>€ 1,108.15</p>
+                                    </div>
                                 </div>                     
                                 <div class="cart-container-sub">
                                     <div class="cart-container-subtotal2">
@@ -283,6 +257,6 @@
         </div>
     </footer>
     <script src="javascripts/index.js"></script>
-    <script src="javascripts/address.js"></script>
+    <script src="javascripts/order.js"></script>
 </body>
 </html>
